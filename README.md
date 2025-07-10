@@ -46,7 +46,7 @@ The project demonstrates real-time embedded programming concepts like GPIO, time
 
 **To Run this Project Source files are available in repo :)**
 
-- **Author**
-- **SOHAN K KUMBHAR**
+- **Author :**
+  **SOHAN K KUMBHAR**
 - Intern at Emertxe Information Technologies
 - **LinkedIn:** https://linkedin.com/in/sohan2277
