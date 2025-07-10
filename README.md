@@ -1,7 +1,7 @@
 # Washing_machine_PIC16F877A
 
-**YOUTUBE VIDEO** - https://youtu.be/0LFGEaDlszk?si=nmy-M4vjqUtHNyZ1
-This project is a simulation of a basic washing machine using the PIC16F877A microcontroller.
+- **YOUTUBE VIDEO** - https://youtu.be/0LFGEaDlszk?si=nmy-M4vjqUtHNyZ1
+- This project is a simulation of a basic washing machine using the PIC16F877A microcontroller.
 It was developed as part of a 30-day Embedded Systems internship at Emertxe Information Technologies.
 The project demonstrates real-time embedded programming concepts like GPIO, timers, interrupts, and peripheral interfacing — simulated using PICSimLab.
 
@@ -46,7 +46,7 @@ The project demonstrates real-time embedded programming concepts like GPIO, time
 
 **To Run this Project Source files are available in repo :)**
 
-**Author**
--**SOHAN K KUMBHAR**
-Intern at Emertxe Information Technologies
-**LinkedIn:** https://linkedin.com/in/sohan2277
+- **Author**
+- **SOHAN K KUMBHAR**
+- Intern at Emertxe Information Technologies
+- **LinkedIn:** https://linkedin.com/in/sohan2277
