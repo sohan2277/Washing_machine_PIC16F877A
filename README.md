@@ -1,52 +1,182 @@
-# Washing_machine_PIC16F877A
+# 🧺 Washing Machine Controller — PIC16F877A
 
-- This project is a simulation of a basic washing machine using the PIC16F877A microcontroller.
-It was developed as part of a 30-day Embedded Systems internship at Emertxe Information Technologies.
-The project demonstrates real-time embedded programming concepts like GPIO, timers, interrupts, and peripheral interfacing — simulated using PICSimLab.
+<p align="left">
+<img src="https://img.shields.io/badge/Embedded_C-00599C?style=for-the-badge" alt="Embedded C"/>
+<img src="https://img.shields.io/badge/PIC16F877A-2C3E50?style=for-the-badge" alt="PIC16F877A"/>
+<img src="https://img.shields.io/badge/MPLAB_X_IDE-EE1C25?style=for-the-badge" alt="MPLAB X IDE"/>
+<img src="https://img.shields.io/badge/PICSimLab-37474F?style=for-the-badge" alt="PICSimLab"/>
+<img src="https://img.shields.io/badge/GPIO-1565C0?style=for-the-badge" alt="GPIO"/>
+<img src="https://img.shields.io/badge/Timers-546E7A?style=for-the-badge" alt="Timers"/>
+<img src="https://img.shields.io/badge/Interrupts-6A1B9A?style=for-the-badge" alt="Interrupts"/>
+<img src="https://img.shields.io/badge/Keypad-00897B?style=for-the-badge" alt="Keypad"/>
+<img src="https://img.shields.io/badge/CLCD-455A64?style=for-the-badge" alt="CLCD"/>
+</p>
 
-**Project Features**
+A **PIC16F877A-based washing machine controller** developed in Embedded C and simulated using **PICSimLab**. The project demonstrates microcontroller programming, GPIO control, timer-based operation, interrupts, keypad interfacing, CLCD interfacing, and peripheral control.
 
-- Mode selection via Keypad (Wash, Rinse, Spin, Idle)
-- CLCD Display for showing system status
-- Fan (motor) simulation using GPIO control
-- Buzzer alert at end of cycle
-- Timer-based delays for realistic wash cycles
-- Software debounce and edge detection for accurate input
-- Code written in Embedded C and compiled using MPLAB X IDE
+Developed as part of a **30-day Embedded Systems Internship at Emertxe Information Technologies**.
 
-**What I Learned**
+---
 
-- Embedded C programming for microcontroller-based systems
-- Working with GPIOs using TRISx and PORTx registers
-- Peripheral interfacing: CLCD, switches, fan, buzzer
-- Using PICSimLab for real-time embedded simulation
-- Handling real-world problems like switch bounce and mode transitions
-- Planning and building a complete embedded system from scratch
+## 🚀 Project Overview
 
-**Tools & Technologies**
+This project simulates the operation of a basic washing machine using the **PIC16F877A microcontroller**.
 
-- PIC16F877A : Microcontroller (8-bit)
-- MPLAB X IDE: Code writing & compilation
-- PICSimLab  : Simulation of circuit & behavior
-- Embedded C : Programming language
+The user selects a washing mode through a keypad, while the system displays the current operation on a character LCD. The controller manages the selected operation using timers and controls peripherals such as a fan and buzzer through GPIO.
 
-**Pin Mapping (Sample):**
-- Keypad    : PORTB (RB0–RB7)
-- CLCD      : PORTD/PORTC (RD0–RD7, RC0–RC2)
-- Fan       : PORTC (RC3)
-- Buzzer    : PORTC (RC4)
+---
 
-**Wash Cycle Modes**
+## ✨ Key Features
 
-- Idle   : System standby
-- Wash   : 5 sec (Fan ON, LCD shows "Washing")
-- Rinse  : 3 sec (Fan ON, LCD shows "Rinsing")
-- Spin   : 2 sec (Fan ON, LCD shows "Spinning")
+* 🔢 Keypad-based mode selection
+* 🖥️ CLCD status display
+* 🌀 Fan/motor simulation using GPIO
+* 🔔 Buzzer notification at the end of a cycle
+* ⏱️ Timer-based washing cycles
+* 🔄 Software debounce and edge detection
+* ⚙️ Multiple operating modes
+* 💻 Embedded C firmware
+* 🧪 Complete simulation using PICSimLab
 
-**To Run this Project Source files are available in repo :)**
+---
 
-- **Author :**
-  **SOHAN K KUMBHAR**
-- Intern at Emertxe Information Technologies
-- **LinkedIn:** https://linkedin.com/in/sohan2277
-- **YOUTUBE VIDEO** - https://youtu.be/0LFGEaDlszk?si=nmy-M4vjqUtHNyZ1
+## 🔄 Washing Modes
+
+| Mode      | Duration | System Operation              |
+| --------- | -------: | ----------------------------- |
+| **Idle**  |        — | System remains in standby     |
+| **Wash**  |    5 sec | Fan ON — `Washing` displayed  |
+| **Rinse** |    3 sec | Fan ON — `Rinsing` displayed  |
+| **Spin**  |    2 sec | Fan ON — `Spinning` displayed |
+
+> Cycle durations are configured for simulation purposes.
+
+---
+
+## 🔌 Hardware / Pin Mapping
+
+| Component | PIC16F877A Pins                        |
+| --------- | -------------------------------------- |
+| Keypad    | PORTB — RB0 to RB7                     |
+| CLCD      | PORTD / PORTC — RD0 to RD7, RC0 to RC2 |
+| Fan       | RC3                                    |
+| Buzzer    | RC4                                    |
+
+---
+
+## 🧠 Embedded Concepts
+
+### GPIO Programming
+
+* `TRISx` and `PORTx` register configuration
+* Digital input/output control
+
+### Keypad Interfacing
+
+* User input detection
+* Software debounce
+* Edge detection
+
+### CLCD Interfacing
+
+* Displaying system status
+* Mode and operation messages
+
+### Timers
+
+* Timer-based cycle control
+* Timing and delays
+
+### Interrupts
+
+* Event handling
+* Timer-based control
+
+### Peripheral Control
+
+* Fan/motor control
+* Buzzer control
+
+---
+
+## 📂 Project Structure
+
+```text
+Washing_machine_PIC16F877A/
+│
+├── Source files/
+│   ├── Header files/
+│   │   ├── clcd.h
+│   │   ├── digital_keypad.h
+│   │   ├── main.h
+│   │   ├── timers.h
+│   │   └── washing_machine_function_def.h
+│   │
+│   └── Source files/
+│       ├── clcd.c
+│       ├── digital_keypad.c
+│       ├── isr.c
+│       ├── main.c
+│       ├── timers.c
+│       ├── washing_machine_function_def.c
+│       └── washing_machine_header_function.c
+│
+├── nbproject/
+├── Makefile
+└── README.md
+```
+
+---
+
+## ▶️ How to Run
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/sohan2277/Washing_machine_PIC16F877A.git
+```
+
+### 2. Open the Project
+
+Open the project in **MPLAB X IDE**.
+
+### 3. Build the Project
+
+Build the project using the configured **PIC16F877A** toolchain.
+
+### 4. Run the Simulation
+
+Load the generated firmware into **PICSimLab** and run the washing machine simulation.
+
+> The repository contains the source code and MPLAB X project files required for the project.
+
+---
+
+## 🎥 Project Demonstration
+
+▶️ **[Watch the Project Demo on YouTube](https://youtu.be/0LFGEaDlszk)**
+
+---
+
+## 📚 What I Learned
+
+* Embedded C programming for PIC microcontrollers
+* Working with `TRISx` and `PORTx` registers
+* GPIO and peripheral interfacing
+* Keypad and CLCD interfacing
+* Timer configuration and interrupt handling
+* Software debounce and edge detection
+* Designing mode-based embedded applications
+* Debugging and testing embedded firmware through simulation
+* Working with PICSimLab for hardware simulation
+
+---
+
+## 👨‍💻 Author
+
+**Sohan K**
+
+Embedded Systems & IoT Developer
+
+🔗 **LinkedIn:**
+https://www.linkedin.com/in/sohan2277/
