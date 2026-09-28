@@ -1,0 +1,53 @@
+# ==========================================
+# MPLAB X / XC8 Project
+# ==========================================
+
+# Build output
+build/
+dist/
+
+# MPLAB X private/user-specific files
+nbproject/private/
+
+# Generated compiler files
+*.o
+*.p1
+*.p1.d
+*.i
+*.d
+*.elf
+*.hex
+*.hxl
+*.lst
+*.map
+*.sym
+*.sdb
+*.rlf
+*.cmf
+*.mum
+*.xml
+
+# ==========================================
+# Temporary / Backup Files
+# ==========================================
+
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# ==========================================
+# Operating System Files
+# ==========================================
+
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# Editor Files
+# ==========================================
+
+.vscode/
+.idea/
